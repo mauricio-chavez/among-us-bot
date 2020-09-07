@@ -1,0 +1,19 @@
+{
+  "name": "among-us-bot",
+  "version": "1.0.0",
+  "description": "Helpful commands for Among Us Discord servers",
+  "main": "app.js",
+  "author": "Mauricio Chávez Olea <mauriciochavezolea@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  },
+  "scripts": {
+    "start:dev": "dotenv nodemon app.js"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^3.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
