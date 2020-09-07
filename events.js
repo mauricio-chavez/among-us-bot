@@ -1,5 +1,5 @@
 const { start, shh, meeting, kill, unkill, finish } = require('./commands');
-const { createRoles } = require('./utils');
+const { createRoles, noVoiceChannel } = require('./utils');
 const prefix = '!';
 
 function guildCreated(guild) {
@@ -15,6 +15,11 @@ function handleMessage(message) {
   const command = split[0];
   const args = split.slice(1);
   const channel = message.member.voice.channel;
+
+  if (!channel) {
+    noVoiceChannel(message);
+    return;
+  }
 
   if (['start', 'init', 'begin'].includes(command)) {
     start(message, channel);

@@ -57,8 +57,17 @@ Don't delete them so I can work the proper way.`
   }
 }
 
+function noVoiceChannel(message) {
+  const noVoiceEmbed = new MessageEmbed()
+    .setColor(0xff0000)
+    .setTitle('Oops...')
+    .setDescription('In order to continue, you must be on a voice channel');
+  message.channel.send(noVoiceEmbed);
+}
+
 module.exports = {
   forEachMember,
   getUserFromMention,
   createRoles,
+  noVoiceChannel,
 };
