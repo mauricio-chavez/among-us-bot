@@ -10,7 +10,8 @@
     "discord.js": "^12.3.1"
   },
   "scripts": {
-    "start:dev": "dotenv nodemon app.js"
+    "start": "node app",
+    "start:dev": "dotenv nodemon app"
   },
   "devDependencies": {
     "dotenv-cli": "^3.2.0",
