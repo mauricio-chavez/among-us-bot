@@ -61,6 +61,7 @@ function kill(message, channel, args) {
     if (mentionedIds.includes(member.user.id)) {
       member.roles.add(deadRole);
       member.roles.remove(aliveRole);
+      member.voice.setMute(true);
     }
   });
   for (const name of mentionedNames) {
